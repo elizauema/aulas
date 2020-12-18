@@ -7,6 +7,16 @@ public class Livro {
 	private int anoPublicacao;
 	private String editora;
 	
+	public Livro(String titulo, String autor, int anoPublicacao, String editora) {
+	    this.titulo = titulo;
+		this.autor = autor;
+		this.anoPublicacao = anoPublicacao;
+		this.editora = editora;
+	}
+	public Livro() {
+		
+	}
+	
 	public String getTitulo() {
 		return this.titulo;
 	}
@@ -31,6 +41,10 @@ public class Livro {
 	}
 	public void setEditora(String editora) {
 		this.editora = editora;
+	}
+	
+	public String toString() {
+		return  ("Titulo:" + titulo+ " Autor:"+autor+" Ano da Publicação:"+anoPublicacao+ " Editora:"+editora);
 	}
 }
 
