@@ -11,4 +11,14 @@ public class Prateleira {
 	}
 	// criar getter getLivros da lista
 	
+	public  ArrayList<Livro> getLivros() {
+		return livros;
+	}
+
+	@Override
+	public String toString() {
+		return "Prateleira [livros=" + livros + "]";
+	}
+	
+	
 }
