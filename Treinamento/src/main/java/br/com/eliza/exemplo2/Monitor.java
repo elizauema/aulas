@@ -21,4 +21,9 @@ public class Monitor {
 	public void setMarcaMonitor(Marca marcaMonitor) {
 		this.marcaMonitor = marcaMonitor;
 	}
+	@Override
+	public String toString() {
+		return "Monitor [tamanhoTela=" + tamanhoTela + ", marcaMonitor=" + marcaMonitor + "]";
+	}
+	
 }

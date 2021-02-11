@@ -19,6 +19,10 @@ public class Marca {
 		this.nome = nome;
 		this.url = url;
 	}
+	@Override
+	public String toString() {
+		return "Marca [nome=" + nome + ", url=" + url + "]";
+	}
 	
 	
 }

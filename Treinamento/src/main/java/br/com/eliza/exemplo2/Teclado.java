@@ -23,4 +23,9 @@ public class Teclado {
 	public void setmarcaTeclado(Marca marcaTeclado) {
 		this.marcaTeclado = marcaTeclado;
 	}
+	@Override
+	public String toString() {
+		return "Teclado [tipoTeclado=" + tipoTeclado + ", marcaTeclado=" + marcaTeclado + "]";
+	}
+	
 }

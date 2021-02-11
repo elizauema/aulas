@@ -25,4 +25,10 @@ public class Impressora {
 	public void setTipoimp(String tipoImp) {
 		this.tipoImp = tipoImp;
 	}
+
+	@Override
+	public String toString() {
+		return "Impressora [marca=" + marca + ", tipoImp=" + tipoImp + "]";
+	}
+	
 }

@@ -25,4 +25,10 @@ public class Mouse {
 	public void setMarcaMouse(Marca marcaMouse) {
 		this.marcaMouse = marcaMouse;
 	}
+
+	@Override
+	public String toString() {
+		return "Mouse [tipoMouse=" + tipoMouse + ", marcaMouse=" + marcaMouse + "]";
+	}
+	
 }
