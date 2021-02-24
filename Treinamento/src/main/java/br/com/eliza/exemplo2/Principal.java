@@ -17,6 +17,8 @@ public class Principal {
 		impressoras.add(impressora1);
 		impressoras.add(impressora2);
 		impressoras.add(impressora3);
+		ArrayList<Impressora> impressoras2 = new ArrayList<Impressora>();
+		impressoras2.add(impressora2);
 		//  criar computador  e todos os objetos dos quais ele depende
 		
 		ArrayList<Monitor> monitores = new ArrayList<Monitor>();
@@ -26,32 +28,46 @@ public class Principal {
 		monitores.add(monitor1);
 		monitores.add(monitor2);
 		monitores.add(monitor3);
+		ArrayList<Monitor> monitores2 = new ArrayList<Monitor>();
+		monitores2.add(monitor3);
+		Mouse mouse1 = new Mouse("optico", marca4);
+		Mouse mouse2 = new Mouse("infravermelho", marca5);
+		Mouse mouse3 = new Mouse("mecanico", marca3);
 		
-		Mouse mouse = new Mouse("optico", marca4);
+		Teclado teclado1  = new Teclado("bluetooth", marca4);
+		Teclado teclado2  = new Teclado("gamer", marca5);
+		Teclado teclado3  = new Teclado("comum", marca3);
 		
-		Teclado teclado  = new Teclado("bluetooth", marca4);
 		// qdo cria o objeto precisa usar o new. Abaixo está usando o constutor1
 		//System.out.println(new Computador(impressoras, monitores, mouse, teclado, marca1));	
-		Computador computer = new Computador(impressoras, monitores, mouse, teclado, marca2);
-		System.out.println(computer);
+		Computador computer = new Computador(impressoras, monitores, mouse1, teclado1, marca2);
+		//System.out.println(computer);
 		
 		//  abaixo usou o construtor2
 		Computador computer2 = new Computador();
-		System.out.println(computer2);
+		//System.out.println(computer2);
 		Computador computer3 = new Computador();
-		computer3.setImpressoras(impressoras);
-		computer3.setMouse(mouse);
-		computer3.setMarca(marca2);
-		computer3.setTeclado(teclado);
-		computer3.setMonitores(monitores);
-		System.out.println(computer3);
+		computer3.setImpressoras(impressoras2);
+		computer3.setMouse(mouse3);
+		computer3.setMarca(marca3);
+		computer3.setTeclado(teclado3);
+		computer3.setMonitores(monitores2);
+//		System.out.println(computer3);
+		System.out.println(computer3.getMarca().getNome() +
+				" Monitor:" + computer3.getMonitores().get(0) + 
+				" Teclado:" + computer3.getTeclado() +
+				" Mouse:" + computer3.getMouse() +
+				" Impressora:" + computer3.getImpressoras().get(0));
 		
 		//construtor3
 		Computador computer4 = new Computador(impressoras, monitores);
-		computer4.setMouse(mouse);
-		System.out.println(computer4);
+		computer4.setMouse(mouse1);
+		//System.out.println(computer4);
 		
 		Computador computer5 = new Computador(impressoras, monitores);
-		System.out.println(computer5);
+		//System.out.println(computer5);
+		
+		//System.out.println(computer5.getMarca().getNome());
 	}
+
 }

@@ -28,7 +28,7 @@ public class Impressora {
 
 	@Override
 	public String toString() {
-		return "Impressora [marca=" + marca + ", tipoImp=" + tipoImp + "]";
+		return "Impressora: " + marca + ", tipoImp=" + tipoImp ;
 	}
 	
 }
