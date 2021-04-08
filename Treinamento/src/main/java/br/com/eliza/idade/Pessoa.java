@@ -1,12 +1,14 @@
 package br.com.eliza.idade;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 
 public class Pessoa {
 	//9) Leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.
 	private String nome;
 	private LocalDate dataNascto;
-	
+		
 	public Pessoa(String nome, LocalDate dataNascto) {
 		this.nome = nome;
 		this.dataNascto = dataNascto;
@@ -32,7 +34,12 @@ public class Pessoa {
 	}
 	
 	public int getIdade() {
-		return 0;// retornar idade
+//		Period period = Period.between(data1, data2);
+//		System.out.printf("%s day(s), %s month(s) and %s year(s) \n",
+//				period.getDays(), period.getMonths(), period.getYears());
+//		return period.getYears();
+	//return Period.between(data1, data2).getYears();
+		return (int)ChronoUnit.YEARS.between(dataNascto, LocalDate.now());
 	}
 	
 }
